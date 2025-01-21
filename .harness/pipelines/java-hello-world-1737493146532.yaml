@@ -19,12 +19,21 @@ pipeline:
                   spec:
                     shell: Sh
                     command: echo "Welcome to Harness CI"
+              - step:
+                  type: Run
+                  name: build_maven
+                  identifier: build_maven
+                  spec:
+                    container: maven:3-jdk-10
+                    shell: Sh
+                    command: mvn clean package
           platform:
             os: Linux
             arch: Amd64
           runtime:
             type: Cloud
             spec: {}
+        description: ""
   properties:
     ci:
       codebase:
