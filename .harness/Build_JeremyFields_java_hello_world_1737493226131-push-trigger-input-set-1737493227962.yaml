@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_JeremyFields_java_hello_world_1737493226131-push-trigger-input-set
+  identifier: Build_JeremyFields_java_hello_world_1737493226131pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: javabuilds
+  pipeline:
+    identifier: Build_JeremyFields_java_hello_world_1737493226131
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
