@@ -28,6 +28,7 @@ pipeline:
                     command: |-
                       mvn  -version
                       java -version
+                      mvn clean package
           platform:
             os: Linux
             arch: Amd64
