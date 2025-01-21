@@ -1,0 +1,33 @@
+pipeline:
+  name: Build java-hello-world
+  identifier: Build_JeremyFields_java_hello_world_1737493226131
+  projectIdentifier: javabuilds
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1706730077161
+        repoName: JeremyFields/java-hello-world
+        build: <+input>
