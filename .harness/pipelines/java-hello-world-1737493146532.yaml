@@ -26,7 +26,9 @@ pipeline:
                   spec:
                     container: maven:3-jdk-10
                     shell: Sh
-                    command: mvn clean package
+                    script: |-
+                      mvn --version
+                      java -version
           platform:
             os: Linux
             arch: Amd64
