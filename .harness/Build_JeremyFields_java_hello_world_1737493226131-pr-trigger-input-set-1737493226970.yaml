@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_JeremyFields_java_hello_world_1737493226131-pr-trigger-input-set
+  identifier: Build_JeremyFields_java_hello_world_1737493226131prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: javabuilds
+  pipeline:
+    identifier: Build_JeremyFields_java_hello_world_1737493226131
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
