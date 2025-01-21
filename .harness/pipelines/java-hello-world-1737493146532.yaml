@@ -25,7 +25,7 @@ pipeline:
                   identifier: build_maven
                   spec:
                     container: maven:3-jdk-10
-                    script: |-
+                    command: |-
                       mvn  -version
                       java -version
           platform:
