@@ -25,9 +25,8 @@ pipeline:
                   identifier: build_maven
                   spec:
                     container: maven:3-jdk-10
-                    shell: Sh
                     script: |-
-                      mvn --version
+                      mvn  -version
                       java -version
           platform:
             os: Linux
