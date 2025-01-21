@@ -28,6 +28,7 @@ pipeline:
                     command: |-
                       mvn  -version
                       java -version
+                      echo $JAVA_HOME
                       mvn clean package
           platform:
             os: Linux
