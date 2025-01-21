@@ -24,7 +24,7 @@ pipeline:
                   name: build_maven
                   identifier: build_maven
                   spec:
-                    container: maven:3-jdk-10
+                    container: maven:3.8.3-openjdk-17
                     command: |-
                       mvn  -version
                       java -version
