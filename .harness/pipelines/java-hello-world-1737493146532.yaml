@@ -24,6 +24,7 @@ pipeline:
                   name: build_maven
                   identifier: build_maven
                   spec:
+                    connectorRef: account.harnessImage
                     container: maven:3.9.9-eclipse-temurin-17
                     command: |-
                       mvn  -version
